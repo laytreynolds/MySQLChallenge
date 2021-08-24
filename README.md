@@ -45,4 +45,18 @@ ORDER BY COUNT(*) DESC
 LIMIT 1;
 
 Question 14: 
-    
+
+Question 16:
+    SELECT AVG(length), category FROM film_list GROUP BY category ORDER BY category ASC;
+
+Question 17:
+    SELECT title FROM film WHERE description LIKE '%robot%';
+
+Question 18:
+    SELECT COUNT(release_year) FROM film WHERE release_year LIKE 2010;
+
+Question 19:
+    SELECT COUNT(release_year) FROM film WHERE release_year LIKE 2010;
+
+Question 20:
+    SELECT first_name, last_name FROM staff WHERE staff_id = 2;
