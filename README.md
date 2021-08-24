@@ -37,10 +37,11 @@ Question 12:
 SELECT last_name FROM actor GROUP BY last_name HAVING COUNT(last_name) >= 1 ORDER BY last_name DESC;
 
 Question 13
+
+
+
     
 
 
-    
 
-
-
+13
