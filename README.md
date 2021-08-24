@@ -31,17 +31,9 @@ Question 10;
     SELECT * FROM film WHERE special_features='Deleted Scenes;
 
 Question 11:
-    SELECT DISTINCT last_name FROM actor ORDER BY last_name DESC;
+    SELECT last_name FROM actor GROUP BY last_name HAVING COUNT(last_name) <= 1 ORDER BY last_name DESC;
 
 Question 12:
 SELECT last_name FROM actor GROUP BY last_name HAVING COUNT(last_name) >= 1 ORDER BY last_name DESC;
 
-Question 13
-
-
-
-    
-
-
-
-13
+Question 13:
