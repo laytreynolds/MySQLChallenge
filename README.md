@@ -37,3 +37,12 @@ Question 12:
 SELECT last_name FROM actor GROUP BY last_name HAVING COUNT(last_name) >= 1 ORDER BY last_name DESC;
 
 Question 13:
+    SELECT actor.first_name, actor.last_name
+FROM actor
+LEFT JOIN film_actor on actor.actor_id = film_actor.actor_id
+GROUP BY actor.actor_id, actor.FIRST_NAME, actor.LAST_NAME
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+Question 14: 
+    
