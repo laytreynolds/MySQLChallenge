@@ -8,5 +8,16 @@ Question 2:
 JOIN ratings B ON
 A.id=B.movie_id;
 
-Question 3:   
-            
+Question 3:
+    SELECT movies.id, title
+FROM movies
+JOIN genres_movies ON genres_movies.movie_id=movies.id
+JOIN genres ON genres.id=genres_movies.genre_id
+JOIN ratings ON ratings.movie_id=movies.id
+JOIN users ON users.id=ratings.user_id
+JOIN occupations ON occupations.id=users.occupation_id
+WHERE genres.name='Sci-Fi'
+AND users.age='24'
+AND users.gender='m'
+AND ratings.rating='5'
+AND occupations.name='Student';

@@ -34,7 +34,7 @@ Question 11:
     SELECT last_name FROM actor GROUP BY last_name HAVING COUNT(last_name) <= 1 ORDER BY last_name DESC;
 
 Question 12:
-SELECT last_name FROM actor GROUP BY last_name HAVING COUNT(last_name) >= 1 ORDER BY last_name DESC;
+    SELECT last_name FROM actor GROUP BY last_name HAVING COUNT(last_name) >= 1 ORDER BY last_name DESC;
 
 Question 13:
     SELECT actor.first_name, actor.last_name
