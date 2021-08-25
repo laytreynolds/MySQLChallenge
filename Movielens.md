@@ -4,9 +4,13 @@ Question 1:
     SELECT title, release_date FROM movies WHERE Release_date BETWEEN '1989-01-01' AND '1993-01-01' ORDER BY release_date DESC;
 
 Question 2:
-    SELECT A.title, MIN(B.rating) FROM movies A
-JOIN ratings B ON
-A.id=B.movie_id;
+    SELECT x.name, x.avg FROM
+(SELECT movies.title AS name, AVG(ratings.rating) AS avg FROM ratings
+JOIN movies ON movies.id = ratings.movie_id
+GROUP BY ratings.movie_id) AS x
+WHERE x.avg = (
+SELECT MIN(y.avg) FROM (SELECT AVG(ratings.rating) AS avg FROM ratings
+GROUP BY ratings.movie_id) AS y);
 
 Question 3:
     SELECT movies.id, title
@@ -23,6 +27,7 @@ AND ratings.rating='5'
 AND occupations.name='Student';
 
 Question 4:
+
 
 Question 5:
     SELECT c.name, COUNT(a.id)
