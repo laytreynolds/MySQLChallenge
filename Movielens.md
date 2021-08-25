@@ -21,3 +21,13 @@ AND users.age='24'
 AND users.gender='m'
 AND ratings.rating='5'
 AND occupations.name='Student';
+
+Question 4:
+
+Question 5:
+    SELECT c.name, COUNT(a.id)
+    FROM movies a
+    JOIN genres_movies b ON a.id=b.movie_id
+    JOIN genres c ON b.genre_id=c.id
+    GROUP BY c.name
+    ORDER BY COUNT(a.id) ASC;
