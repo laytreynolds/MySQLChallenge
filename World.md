@@ -60,4 +60,3 @@ Question 19:
 
 Question 20:
     SELECT COUNT(name) FROM country WHERE indepyear IS NOT NULL;
-
