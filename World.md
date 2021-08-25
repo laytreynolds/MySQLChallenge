@@ -1,31 +1,31 @@
 # MySQLChallenge - World Completed
 
 Question 1: 
-    SELECT COUNT(name) FROM city WHERE CountryCode='USA';
+    SELECT COUNT(name) AS CitiesInUSA FROM city WHERE CountryCode='USA';
 
 Question 2: 
-    SELECT Population, LifeExpectancy FROM country WHERE Name='Argentina';
+    SELECT name, Population, LifeExpectancy FROM country WHERE Name='Argentina';
 
 Question 3: 
-    SELECT Name FROM country WHERE LifeExpectancy IS NOT NULL ORDER BY LifeExpectancy DESC LIMIT 1;
+    SELECT Name AS HighestLifeExpectancy FROM country WHERE LifeExpectancy IS NOT NULL ORDER BY LifeExpectancy DESC LIMIT 1;
 
 Question 4: 
-    SELECT a.name FROM city a JOIN country b ON ID=Capital WHERE (b.name='Spain');
+    SELECT a.name AS CapitalOfSpain FROM city a JOIN country b ON ID=Capital WHERE (b.name='Spain');
 
 Question 5:
-    SELECT a.language FROM CountryLanguage a JOIN Country b ON Code=Countrycode WHERE (b.region='Southeast Asia');
+    SELECT DISTINCT a.language AS SeAsiaLanguages FROM CountryLanguage a JOIN Country b ON Code=Countrycode WHERE (b.region='Southeast Asia');
 
 Question 6:
-    SELECT name FROM city WHERE name LIKE 'F%' LIMIT 25;
+    SELECT name AS Top25FCities FROM city WHERE name LIKE 'F%' LIMIT 25;
 
 Question 7:    
-    SELECT COUNT(a.name) FROM city a JOIN country b ON Code=CountryCode WHERE (code='CHN');
+    SELECT COUNT(a.name) AS CitiesInChina FROM city a JOIN country b ON Code=CountryCode WHERE (code='CHN');
 
 Question 8:
-    SELECT population FROM country WHERE population > 1 ORDER BY population LIMIT 1;
+    SELECT Name, Population FROM country WHERE population > 1 ORDER BY population ASC LIMIT 1;
 
 Question 9:
-    SELECT COUNT(name) FROM country;
+    SELECT COUNT(name) AS Countries FROM country;
 
 Question 10;
     SELECT name FROM country ORDER BY SurfaceArea DESC LIMIT 10;
@@ -39,6 +39,8 @@ Question 11:
             SELECT Name, Code FROM country WHERE HeadOfState='Elizabeth II';
 
 Question 13:
+    SELECT name, Min(Population), MAX(SurfaceArea) FROM country GROUP BY Name ORDER BY MAX(Population);
+
     
 
 Question 14:
