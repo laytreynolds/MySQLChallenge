@@ -1,4 +1,4 @@
-# MySQLChallenge - Saskilla 
+# MySQLChallenge - Saskilla Completed
 
 Question 1:
     SELECT first_name, last_name FROM Actors;

@@ -1,4 +1,4 @@
-# MySQLChallenge - World
+# MySQLChallenge - World Completed
 
 Question 1: 
     SELECT COUNT(name) FROM city WHERE CountryCode='USA';
